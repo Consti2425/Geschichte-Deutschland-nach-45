@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#132b45">
+<meta name="description" content="Interaktive Zeitleiste zu Freiheit und Einheit in der deutschen Geschichte von 1945 bis 1989.">
+<title>Freiheit & Einheit | 1945–1989</title>
+<style>
+:root{color-scheme:light;--bg:#f4f6f7;--surface:#fff;--ink:#17283b;--muted:#52657a;--navy:#132b45;--line:#cad5df;--blue:#225b86;--blue-soft:#eaf2f8;--gold:#c08b30;--shadow:0 16px 42px rgba(14,38,65,.09)}
+:root[data-theme=dark]{color-scheme:dark;--bg:#101a25;--surface:#1a2a3a;--ink:#eef4f8;--muted:#b4c5d2;--navy:#0c1621;--line:#4d6477;--blue:#9bd1f1;--blue-soft:#243e52;--gold:#e6ba66;--shadow:0 18px 48px rgba(0,0,0,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{font:inherit}a{color:var(--blue)}a:hover{text-decoration-thickness:2px}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.wrap{max-width:1140px;margin:auto;padding:0 22px}.top{background:var(--navy);color:white;border-bottom:5px solid #c7a45b}.topbar{display:flex;justify-content:space-between;align-items:center;padding-top:16px;gap:16px}.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:750;color:#d9ba78}.theme{border:1px solid #ffffff90;color:white;background:#ffffff15;border-radius:999px;padding:8px 14px;cursor:pointer;white-space:nowrap;min-height:44px}.hero{padding:28px 0 34px}.hero h1{font-family:Georgia,serif;letter-spacing:-.035em;font-size:clamp(2.3rem,5.5vw,4.2rem);line-height:1.09;margin:.16em 0 .3em}.hero p{max-width:760px;font-size:1.08rem;margin:0;color:#e4edf4}.hero strong{color:white}.main{padding-top:26px;padding-bottom:55px}.section-label{font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 5px}.section-heading{font-family:Georgia,serif;line-height:1.2;font-size:clamp(1.6rem,3vw,2.15rem);margin:0 0 13px}.timeline-wrap{overflow-x:auto;scrollbar-width:thin;scroll-padding:35px;margin:0 -6px 18px;padding:0 6px 12px}.timeline{position:relative;display:flex;min-width:max-content;align-items:flex-start;padding:15px 12px 0;gap:0}.timeline:before{content:"";height:4px;background:var(--line);position:absolute;top:40px;left:65px;right:65px;border-radius:9px}.point{position:relative;z-index:1;appearance:none;border:0;background:none;color:var(--muted);width:144px;min-height:115px;padding:0 10px;text-align:center;cursor:pointer;touch-action:manipulation}.point .dot{display:block;width:26px;height:26px;margin:13px auto 13px;border:5px solid var(--surface);box-shadow:0 0 0 2px var(--line);border-radius:50%;background:var(--gold);transition:transform .2s,box-shadow .2s}.point .year{display:block;font-size:1.05rem;font-weight:800;color:var(--ink);line-height:1.2}.point .name{display:block;font-size:.82rem;line-height:1.28;margin-top:5px}.point:hover .dot,.point[aria-current=true] .dot{transform:scale(1.25);box-shadow:0 0 0 3px var(--blue);background:var(--blue)}.point[aria-current=true] .year,.point[aria-current=true] .name{color:var(--blue)}.hint{font-size:.9rem;color:var(--muted);margin:0 0 17px}.card{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;overflow:hidden}.event-hero{position:relative;min-height:300px;background:#334c63;color:white;display:grid;align-items:end}.event-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.event-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,18,30,.94),rgba(7,18,30,.27) 72%)}.event-photo.missing{display:none}.event-heading{z-index:1;position:relative;padding:25px 28px 24px;pointer-events:none}.event-heading h2{font-family:Georgia,serif;line-height:1.14;font-size:clamp(1.7rem,3.3vw,2.65rem);margin:4px 0 5px}.event-heading p{margin:0;max-width:690px;color:#e6edf3}.event-heading .kicker{font-size:.86rem;font-weight:800;color:#edd19a;letter-spacing:.12em;text-transform:uppercase}.photo-open{position:absolute;z-index:2;right:20px;top:18px;background:rgba(9,25,40,.72);border:1px solid #ffffff8a;color:white;border-radius:999px;padding:9px 14px;min-height:44px;cursor:pointer}.photo-open[hidden]{display:none}.event-content{padding:24px 28px 28px}.caption{font-size:.81rem;color:var(--muted);margin:-7px 0 21px}.impact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 22px}.impact-item{border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:var(--blue-soft)}.impact-item b{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;color:var(--muted)}.impact-item span{font-size:1rem;font-weight:750;color:var(--ink)}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.info{padding:18px 20px;background:var(--blue-soft);border-radius:13px}.info.wide{grid-column:1/-1}.info h3,.takeaway h3{margin:0 0 5px;font-size:1.04rem}.info p,.takeaway p{margin:0}.takeaway{background:var(--navy);color:white;border-radius:13px;padding:19px 22px;margin-top:15px;border-left:5px solid var(--gold)}.source-box{margin-top:16px;border-left:4px solid var(--gold);padding:12px 16px;background:var(--bg);border-radius:0 10px 10px 0}.source-box strong{font-size:.88rem}.source-box blockquote{font-family:Georgia,serif;font-size:1.14rem;margin:5px 0}.source-box small{color:var(--muted)}.navigation{display:flex;justify-content:space-between;gap:12px;padding:18px 0 0}.nav-button,.secondary{border:1px solid var(--line);color:var(--ink);background:var(--surface);border-radius:10px;padding:10px 15px;cursor:pointer;min-height:46px;font-weight:650}.nav-button:disabled{opacity:.38;cursor:default}.nav-button:not(:disabled):hover,.secondary:hover{border-color:var(--blue);color:var(--blue)}.progress{font-size:.9rem;color:var(--muted);align-self:center;text-align:center}.below{margin-top:43px}.map-card,.quiz-card,.summary-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}.map-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:20px;align-items:center}.map-view{background:var(--blue-soft);border-radius:13px;min-height:315px;display:grid;place-items:center}.map-view svg{width:100%;height:315px}.map-controls{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 17px}.map-controls button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 13px;border-radius:999px;cursor:pointer;min-height:40px}.map-controls button[aria-pressed=true]{background:var(--blue);color:var(--navy);border-color:var(--blue)}:root:not([data-theme=dark]) .map-controls button[aria-pressed=true]{color:#fff}.map-copy h3{font-size:1.3rem;margin:0 0 7px}.map-copy p{margin:0;color:var(--muted)}.map-note{font-size:.82rem;color:var(--muted);margin:12px 0 0}.map-region{cursor:pointer;transition:opacity .2s,filter .2s}.map-region:hover,.map-region.is-active{filter:brightness(1.15)}.map-region.is-dim{opacity:.3}.map-label{font:700 19px system-ui;fill:white;pointer-events:none}.map-berlin{cursor:pointer}.summary-stages{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}.stage{position:relative;border-top:5px solid var(--gold);background:var(--blue-soft);border-radius:0 0 10px 10px;padding:15px;min-height:120px}.stage:nth-child(2){border-color:#8f5160}.stage:nth-child(3){border-color:#528399}.stage:nth-child(4){border-color:#4c9a74}.stage b{display:block;font-size:1.15rem}.stage span{font-size:.9rem;color:var(--muted)}.quiz-question{border:0;border-top:1px solid var(--line);margin:0;padding:17px 0}.quiz-question legend{font-weight:700;padding:17px 0 3px}.quiz-question label{display:block;padding:5px 0;cursor:pointer}.quiz-question input{accent-color:var(--blue);margin-right:9px;transform:scale(1.1)}.quiz-action{border:0;border-radius:10px;background:var(--navy);color:white;padding:11px 22px;cursor:pointer;min-height:48px;font-weight:750}.quiz-result{margin-top:15px;padding:16px;background:var(--blue-soft);border-radius:12px}.quiz-result[hidden]{display:none}.quiz-result p{margin:0 0 8px}.quiz-result ol{margin:6px 0 0;padding-left:22px}.quiz-result li{margin:3px 0}.foot{font-size:.84rem;color:var(--muted);border-top:1px solid var(--line);padding:20px 0 40px}.modal{border:0;border-radius:15px;padding:0;max-width:min(96vw,1100px);max-height:94vh;background:var(--surface);color:var(--ink);box-shadow:0 24px 80px #0008}.modal::backdrop{background:#071420da}.modal-inner{padding:18px}.modal-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.modal-top h2{font-size:1.05rem;margin:0 0 10px}.modal-top button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;font-size:1.3rem;line-height:1;cursor:pointer;width:42px;height:42px}.modal img{display:block;max-width:100%;max-height:70vh;object-fit:contain;margin:auto}.modal p{font-size:.85rem;color:var(--muted);margin:9px 0 0}.fade{animation:fade .32s ease}@keyframes fade{from{opacity:.5;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}@media(max-width:760px){.hero{padding:24px 0 28px}.wrap{padding:0 15px}.timeline-wrap{margin-right:-15px}.point{width:128px}.event-hero{min-height:265px}.event-content{padding:20px 18px}.event-heading{padding:22px 18px}.info-grid,.impact,.map-layout{grid-template-columns:1fr}.map-layout{gap:13px}.summary-stages{grid-template-columns:repeat(2,1fr)}.navigation{align-items:stretch}.nav-button{flex:1;padding:8px}.progress{font-size:.8rem;flex:0 0 46px}.map-card,.quiz-card,.summary-card{padding:19px}}@media(max-width:420px){.hero h1{font-size:2.18rem}.event-heading h2{font-size:1.55rem}.summary-stages{grid-template-columns:1fr 1fr}.stage{padding:10px;min-height:135px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{animation:none}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="topbar"><span class="eyebrow">Interaktive Geschichte · 1945–1989</span><button class="theme" id="theme" type="button" aria-label="Dunkles Design einschalten">◐ &nbsp;Dark Mode</button></div><div class="hero"><h1>Freiheit &amp; Einheit</h1><p>Wie entwickeln sich Freiheit und Einheit in der deutschen Geschichte von 1945 bis 1989? Wähle ein Jahr auf der Zeitleiste und sieh, wie sich beides verändert.</p></div></div></header>
+<main class="wrap main"><section aria-labelledby="timeline-heading"><p class="section-label">Die Ereignisse</p><h2 class="section-heading" id="timeline-heading">Eine Zeitleiste, zwei Entwicklungen</h2><p class="hint">Tippe auf einen Punkt oder nutze „Zurück“ und „Weiter“.</p><div class="timeline-wrap" id="timeline-wrap"><nav class="timeline" id="timeline" aria-label="Ereignisse von 1945 bis 1989"></nav></div><article class="card" id="content" aria-live="polite"></article><div class="navigation"><button type="button" class="nav-button" id="prev">← Zurück</button><span class="progress" id="progress"></span><button type="button" class="nav-button" id="next">Weiter →</button></div></section>
+<section class="below" id="map-section" aria-labelledby="map-heading"><p class="section-label">Deutschland und Berlin</p><h2 class="section-heading" id="map-heading">Die Teilung auf einen Blick</h2><div class="map-card"><div class="map-layout"><div class="map-view"><svg viewBox="0 0 480 315" role="img" aria-label="Vereinfachte Karte: Bundesrepublik im Westen, DDR im Osten, Berlin innerhalb der DDR"><defs><clipPath id="shape"><path d="M164 18 L210 30 235 19 279 29 310 51 333 69 327 91 348 110 331 136 343 155 321 177 325 211 299 229 310 250 275 267 266 294 222 284 201 296 178 274 146 280 127 257 105 246 113 223 90 209 105 181 93 160 112 134 99 103 113 75 139 65 139 39 Z"/></clipPath></defs><g clip-path="url(#shape)"><path class="map-region" data-region="west" fill="#296b91" d="M80 0 H230 L251 82 227 143 241 185 253 315 H80Z"/><path class="map-region" data-region="east" fill="#b77951" d="M230 0 H380 V315 H253 L241 185 227 143 251 82Z"/></g><path d="M164 18 L210 30 235 19 279 29 310 51 333 69 327 91 348 110 331 136 343 155 321 177 325 211 299 229 310 250 275 267 266 294 222 284 201 296 178 274 146 280 127 257 105 246 113 223 90 209 105 181 93 160 112 134 99 103 113 75 139 65 139 39 Z" fill="none" stroke="var(--ink)" stroke-width="2"/><text x="150" y="188" class="map-label">BRD</text><text x="265" y="123" class="map-label">DDR</text><g class="map-berlin" data-region="berlin"><circle cx="282" cy="145" r="12" fill="#f4e6b5" stroke="#17283b" stroke-width="3"/><circle cx="282" cy="145" r="3" fill="#17283b"/><text x="300" y="151" style="font:700 17px system-ui;fill:var(--ink)">Berlin</text></g></svg></div><div class="map-copy"><div class="map-controls" aria-label="Karte erkunden"><button type="button" data-map="west">BRD</button><button type="button" data-map="east">DDR</button><button type="button" data-map="berlin">Berlin</button></div><h3 id="map-title"></h3><p id="map-text"></p><p class="map-note">Vereinfachte Übersicht, keine maßstabsgetreue politische Karte. Tippe auf einen Bereich oder die Schaltflächen.</p></div></div></div></section>
+<section class="below" aria-labelledby="summary-heading"><p class="section-label">Antwort auf die Leitfrage</p><h2 class="section-heading" id="summary-heading">Was zeigt die Entwicklung?</h2><div class="summary-card"><p>Nach 1945 wachsen Freiheit und Einheit nicht gleichzeitig. Die Bundesrepublik entwickelt eine freiheitliche Demokratie, während die deutsche Teilung tiefer wird. Annäherung erleichtert später Kontakte. 1989 erzwingen die Menschen in der DDR mehr Freiheit und öffnen damit den Weg zur Wiedervereinigung von 1990.</p><div class="summary-stages"><div class="stage"><b>1945–49</b><span>Neubeginn und Entstehung zweier Staaten</span></div><div class="stage"><b>1961</b><span>Die Mauer verfestigt die Teilung</span></div><div class="stage"><b>1969–72</b><span>Annäherung und mehr Kontakte</span></div><div class="stage"><b>1989</b><span>Friedliche Revolution und Maueröffnung</span></div></div></div></section>
+<section class="below" aria-labelledby="quiz-heading"><p class="section-label">Zum Schluss</p><h2 class="section-heading" id="quiz-heading">Hast du die Zeitleiste gelesen?</h2><div class="quiz-card"><p>Fünf einfache Fragen. Wähle jeweils eine Antwort und sieh dir danach deine Punktzahl an.</p><form id="quiz"></form><button type="button" class="quiz-action" id="quiz-submit">Ergebnis anzeigen</button><div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div></div></section></main>
+<footer class="wrap foot">Historische Fotos: Wikimedia Commons. Die jeweilige Urheber- und Lizenzangabe steht beim Ereignis; die Originaldatei ist dort verlinkt. Die Quellen der Zitate stehen direkt unter dem Text.</footer>
+<dialog class="modal" id="photo-modal" aria-labelledby="modal-title"><div class="modal-inner"><div class="modal-top"><h2 id="modal-title"></h2><button type="button" id="modal-close" aria-label="Bildansicht schließen">×</button></div><img id="modal-photo" alt=""><p id="modal-credit"></p></div></dialog>
+<script>
+function commonsImage(file){return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(file)+"?width=1400"}
+function commonsPage(file){return "https://commons.wikimedia.org/wiki/File:"+encodeURIComponent(file.replaceAll(" ","_"))}
+const events = [
+  {
+    year: "1945",
+    label: "Ende 2. Weltkrieg",
+    title: "1945 – Ende des Zweiten Weltkriegs",
+    subtitle: "Zusammenbruch der NS-Diktatur und Beginn einer neuen Ordnung",
+    imageFile: "Bundesarchiv Bild 183-M1015-331, Berlin, zerstörtes Brandenburger Tor und Reichstagsgebäude.jpg",
+    credit: "Bundesarchiv, Bild 183-M1015-331 / Otto Donath / CC BY-SA 3.0 DE",
+    happened: "Mit der Kapitulation Deutschlands endet 1945 der Zweite Weltkrieg in Europa. Die nationalsozialistische Diktatur bricht zusammen. Deutschland wird von den vier Siegermächten besetzt und in Besatzungszonen aufgeteilt.",
+    freedom: "Das Ende der NS-Diktatur ist die Voraussetzung dafür, dass politische und persönliche Freiheit wieder entstehen können. Zunächst können die Deutschen über ihren Staat jedoch noch nicht vollständig selbst bestimmen, weil Deutschland unter alliierter Besatzung steht.",
+    unity: "Deutschland bleibt 1945 nicht als einheitlicher souveräner Staat bestehen, sondern wird in vier Besatzungszonen aufgeteilt. Daraus entwickelt sich später die Teilung in zwei deutsche Staaten.",
+    question: "1945 eröffnet die Möglichkeit für neue Freiheit, gleichzeitig beginnt aber die politische Teilung Deutschlands."
+  },
+  {
+    year: "1948/49",
+    label: "Berlin-Blockade",
+    title: "1948/49 – Berlin-Blockade und Luftbrücke",
+    subtitle: "Konfrontation zwischen den Westmächten und der Sowjetunion",
+    imageFile: "C-54 landing at Tempelhof.jpg",
+    credit: "US Air Force / Henry Ries – Public Domain",
+    happened: "Die Sowjetunion sperrt die Land- und Wasserwege nach West-Berlin. Die Westmächte versorgen die Bevölkerung daraufhin fast ein Jahr lang über die Berliner Luftbrücke.",
+    freedom: "Die Luftbrücke steht für den Versuch, die politische Selbstbestimmung und Versorgung West-Berlins trotz der Blockade aufrechtzuerhalten.",
+    unity: "Die Krise verschärft den Gegensatz zwischen Ost und West. Die gemeinsame Verwaltung Deutschlands durch die Siegermächte zerfällt immer stärker.",
+    question: "Freiheit wird in West-Berlin verteidigt, während sich die Spaltung Deutschlands weiter vertieft."
+  },
+  {
+    year: "1949",
+    label: "BRD und DDR",
+    title: "1949 – Gründung von BRD und DDR",
+    subtitle: "Aus den Besatzungszonen entstehen zwei deutsche Staaten",
+    imageFile: "Präambel Grundgesetz 1949.jpeg",
+    credit: "Bundesgesetzblatt / Parlamentarischer Rat – Public Domain",
+    happened: "1949 werden die Bundesrepublik Deutschland im Westen und die DDR im Osten gegründet. In der Bundesrepublik tritt das Grundgesetz in Kraft; Konrad Adenauer wird erster Bundeskanzler.",
+    freedom: "In der Bundesrepublik entsteht eine parlamentarische Demokratie mit Grundrechten und freien Wahlen. In der DDR entwickelt sich dagegen die Herrschaft der SED ohne freie politische Konkurrenz.",
+    unity: "Die Gründung zweier Staaten macht die deutsche Teilung dauerhaft sichtbar. Deutschland ist politisch nicht mehr einheitlich organisiert.",
+    question: "1949 zeigt den Gegensatz besonders deutlich: Im Westen wächst politische Freiheit, während die deutsche Einheit verloren geht."
+  },
+  {
+    year: "1953",
+    label: "Volksaufstand DDR",
+    title: "1953 – Volksaufstand in der DDR",
+    subtitle: "Proteste für bessere Lebensbedingungen und politische Veränderungen",
+    imageFile: "Bundesarchiv B 145 Bild-F005191-0040, Berlin, Aufstand, sowjetischer Panzer.jpg",
+    credit: "Bundesarchiv, B 145 Bild-F005191-0040 / unbekannter Fotograf / CC BY-SA 3.0 DE",
+    happened: "Am 17. Juni 1953 breiten sich Proteste und Streiks in der DDR aus. Sowjetische Truppen und Sicherheitskräfte schlagen den Aufstand gewaltsam nieder.",
+    freedom: "Die Proteste zeigen deutlich den Wunsch vieler Menschen nach mehr Selbstbestimmung und politischen Freiheiten. Die Niederschlagung zeigt zugleich die Grenzen dieser Freiheit in der DDR.",
+    unity: "Der Aufstand verändert die staatliche Teilung nicht. Er macht aber die politischen Unterschiede zwischen Bundesrepublik und DDR besonders deutlich.",
+    question: "1953 wird sichtbar, wie stark der Wunsch nach Freiheit ist – und wie weit die beiden deutschen politischen Systeme auseinanderliegen."
+  },
+  {
+    year: "1955",
+    label: "BRD in der NATO",
+    title: "1955 – Beitritt der Bundesrepublik zur NATO",
+    subtitle: "Die Bundesrepublik wird fest in das westliche Bündnis eingebunden",
+    imageFile: "Bundesarchiv B 145 Bild-098967, Aufnahme der Bundesrepublik in die NATO.jpg",
+    credit: "Bundesarchiv, B 145 Bild-098967 / CC BY-SA 3.0 DE",
+    happened: "Im Mai 1955 wird die Bundesrepublik Mitglied der NATO und damit Teil des westlichen Verteidigungsbündnisses.",
+    freedom: "Die Bundesregierung verbindet die Westbindung mit der Sicherung der freiheitlich-demokratischen Ordnung und mit größerer außenpolitischer Selbstständigkeit.",
+    unity: "Die Einbindung der Bundesrepublik in die NATO und der DDR in den sowjetisch geführten Ostblock verfestigt die Trennung beider Staaten.",
+    question: "Die Freiheit und Westbindung der Bundesrepublik werden gestärkt, während eine schnelle deutsche Einheit weiter in die Ferne rückt."
+  },
+  {
+    year: "1957",
+    label: "EWG-Vertrag",
+    title: "1957 – Römische Verträge und Gründung der EWG",
+    subtitle: "Die Bundesrepublik beteiligt sich an der europäischen Integration",
+    imageFile: "Bundesarchiv Bild 183-45653-0001, Rom, Verträge über Zollpakt und Eurotom unterzeichnet.jpg",
+    credit: "Bundesarchiv, Bild 183-45653-0001 / CC BY-SA 3.0 DE",
+    happened: "1957 unterzeichnen sechs Staaten, darunter die Bundesrepublik, die Römischen Verträge. Dadurch entstehen die Europäische Wirtschaftsgemeinschaft und Euratom.",
+    freedom: "Die europäische Zusammenarbeit soll wirtschaftlichen Austausch erleichtern. Menschen, Waren, Dienstleistungen und Kapital können sich langfristig freier zwischen den Mitgliedstaaten bewegen.",
+    unity: "Die deutsche Einheit wird dadurch nicht unmittelbar erreicht. Gleichzeitig entsteht aber eine neue Form von Einheit: die engere Zusammenarbeit westeuropäischer Staaten.",
+    question: "Neben der weiterhin fehlenden deutschen Einheit gewinnt eine europäische Form von Einheit und grenzüberschreitender Freiheit an Bedeutung."
+  },
+  {
+    year: "1961",
+    label: "Berliner Mauer",
+    title: "1961 – Bau der Berliner Mauer",
+    subtitle: "Die Teilung Deutschlands wird sichtbar und nahezu unüberwindbar",
+    imageFile: "Bundesarchiv Bild 183-88222-0002, Berlin, Mauer am Brandenburger Tor.jpg",
+    credit: "Bundesarchiv, Bild 183-88222-0002 / Horst Sturm / CC BY-SA 3.0 DE",
+    happened: "Am 13. August 1961 beginnt die DDR mit der Abriegelung der Grenze in Berlin. In den folgenden Monaten und Jahren wird daraus die Berliner Mauer.",
+    freedom: "Die Reisefreiheit und Bewegungsfreiheit der Menschen in der DDR wird massiv eingeschränkt. Familien und Freunde werden getrennt, Fluchtversuche können lebensgefährlich sein.",
+    unity: "Die Mauer wird zum sichtbarsten Symbol der deutschen Teilung und macht eine Wiedervereinigung vorerst noch unwahrscheinlicher.",
+    question: "1961 ist ein Tiefpunkt für Freiheit und Einheit: persönliche Freiheit wird stark eingeschränkt und die Teilung Deutschlands verfestigt sich."
+  },
+  {
+    year: "1963",
+    label: "Élysée-Vertrag",
+    title: "1963 – Élysée-Vertrag",
+    subtitle: "Deutschland und Frankreich bauen eine enge Partnerschaft auf",
+    imageFile: "Bundesarchiv B 145 Bild-P106816, Paris, Unterzeichnung Elysée-Vertrag.jpg",
+    credit: "Bundesarchiv, B 145 Bild-P106816 / CC BY-SA 3.0 DE",
+    happened: "Konrad Adenauer und Charles de Gaulle unterzeichnen 1963 den Élysée-Vertrag. Er vereinbart eine enge deutsch-französische Zusammenarbeit.",
+    freedom: "Nach Jahrzehnten der Feindschaft wird Zusammenarbeit zum Grundprinzip. Das stärkt Frieden und politische Stabilität in Westeuropa.",
+    unity: "Für die deutsche Wiedervereinigung bringt der Vertrag keine direkte Veränderung. Er stärkt aber die europäische Einigung und die Rolle der Bundesrepublik darin.",
+    question: "Einheit wird hier vor allem europäisch gedacht: ehemalige Gegner arbeiten dauerhaft zusammen und schaffen gemeinsame Strukturen."
+  },
+  {
+    year: "1967",
+    label: "Europäische Gemeinschaften",
+    title: "1967 – Zusammenschluss der Europäischen Gemeinschaften",
+    subtitle: "Die europäische Integration wird organisatorisch vertieft",
+    imageFile: "Last Meeting of the High Authority of the ECSC.jpg",
+    credit: "Europäische Gemeinschaften / Audiovisueller Dienst – Wikimedia Commons",
+    happened: "1967 tritt der Fusionsvertrag in Kraft. EWG, Euratom und EGKS erhalten gemeinsame Organe und werden zusammen als Europäische Gemeinschaften bezeichnet.",
+    freedom: "Die engere europäische Zusammenarbeit erleichtert langfristig Handel, Austausch und grenzüberschreitende Mobilität.",
+    unity: "Deutschland bleibt geteilt. Gleichzeitig wird die Bundesrepublik immer stärker Teil einer sich einigenden westeuropäischen Gemeinschaft.",
+    question: "Während die deutsche Einheit weiterhin fehlt, wächst die europäische Einheit weiter."
+  },
+  {
+    year: "1969",
+    label: "Neue Ostpolitik",
+    title: "1969 – Beginn der Neuen Ostpolitik",
+    subtitle: "Annäherung zwischen Westdeutschland, der DDR und Osteuropa",
+    imageFile: "Bundesarchiv B 145 Bild-F030285-0013, Bonn, Amtsantritt Bundeskanzler Willy Brandt.jpg",
+    credit: "Bundesarchiv, B 145 Bild-F030285-0013 / CC BY-SA 3.0 DE",
+    happened: "Mit Bundeskanzler Willy Brandt beginnt eine Politik der Annäherung an die DDR und die Staaten Osteuropas. Das Verhältnis zwischen Ost und West soll durch Gespräche und Verträge verbessert werden.",
+    freedom: "Die Ostpolitik schafft nicht unmittelbar Demokratie in der DDR. Sie erleichtert aber Kontakte, Reisen und menschliche Begegnungen zwischen Ost und West.",
+    unity: "Die Bundesregierung akzeptiert die bestehende Teilung zunächst als politische Realität, ohne die Vorstellung einer gemeinsamen deutschen Nation aufzugeben.",
+    question: "Der Weg zu mehr Verbindung zwischen beiden deutschen Staaten führt nun stärker über Annäherung und praktische Erleichterungen."
+  },
+  {
+    year: "1972",
+    label: "Grundlagenvertrag",
+    title: "1972 – Grundlagenvertrag zwischen BRD und DDR",
+    subtitle: "Beide Staaten regeln ihr Verhältnis zueinander",
+    imageFile: "Bundesarchiv Bild 183-L1221-0020, Berlin, Grundlagenvertrag, Pressekonferenz.jpg",
+    credit: "Bundesarchiv, Bild 183-L1221-0020 / Hubert Link / CC BY-SA 3.0 DE",
+    happened: "Im Dezember 1972 schließen Bundesrepublik und DDR den Grundlagenvertrag. Beide Seiten vereinbaren geregelte Beziehungen und Zusammenarbeit.",
+    freedom: "Der Vertrag beseitigt die politischen Einschränkungen in der DDR nicht. Er erleichtert aber Kontakte und schafft Möglichkeiten für praktische Verbesserungen im Verhältnis beider Staaten.",
+    unity: "Kurzfristig bestätigt der Vertrag die Existenz zweier deutscher Staaten. Gleichzeitig verhindert die Annäherung, dass die Verbindungen zwischen den Menschen vollständig abbrechen.",
+    question: "Einheit bedeutet 1972 noch keine Wiedervereinigung. Stattdessen geht es zunächst darum, die Trennung menschlich und politisch etwas durchlässiger zu machen."
+  },
+  {
+    year: "1989",
+    label: "Friedliche Revolution",
+    title: "1989 – Friedliche Revolution und Fall der Berliner Mauer",
+    subtitle: "Der entscheidende Wendepunkt auf dem Weg zur deutschen Einheit",
+    imageFile: "BerlinWall-BrandenburgGate.jpg",
+    credit: "Sue Ream / CC BY 3.0",
+    happened: "1989 demonstrieren immer mehr Menschen in der DDR friedlich für Reformen, freie Wahlen und Reisefreiheit. Am 9. November wird die Berliner Mauer geöffnet.",
+    freedom: "Die Friedliche Revolution führt zu einem grundlegenden politischen Wandel. Die Menschen in der DDR setzen mehr Meinungsfreiheit, Reisefreiheit und politische Mitbestimmung durch.",
+    unity: "Mit dem Mauerfall wird die jahrzehntelange Trennung praktisch durchbrochen. Er öffnet den Weg zur deutschen Wiedervereinigung im folgenden Jahr.",
+    question: "1989 kommen Freiheit und Einheit wieder eng zusammen: Der erfolgreiche Kampf für Freiheit macht die Überwindung der deutschen Teilung möglich."
+  }
+];
+
+const impact=[
+["Neubeginn unter Besatzung","Besatzungszonen"],["West-Berlin gesichert","Spaltung vertieft"],["Grundrechte im Westen","Zwei Staaten"],["Aufstand niedergeschlagen","Teilung bleibt"],["Demokratie abgesichert","Blockbindung vertieft"],["Wirtschaftlicher Austausch","Europäische Zusammenarbeit"],["Reisefreiheit massiv begrenzt","Teilung verfestigt"],["Frieden und Kooperation","Europäische Annäherung"],["Austausch wächst langfristig","Europa rückt zusammen"],["Kontakte erleichtert","Annäherung"],["Begegnungen erleichtert","Zwei Staaten bleiben"],["Freiheiten erkämpft","Weg zur Einheit geöffnet"]
+];
+const primary={
+"1949":{quote:"Die Würde des Menschen ist unantastbar.",context:"Artikel 1 Absatz 1 des Grundgesetzes",url:"https://www.bundestag.de/parlament/grundgesetz/641130-641130"},
+"1953":{quote:"Freie, geheime Wahlen für die Einheit Deutschlands.",context:"Forderung beim Volksaufstand, vom Bundesarchiv dokumentiert",url:"https://www.bundesarchiv.de/themen-entdecken/online-entdecken/storys/volksaufstand/folgen/"},
+"1989":{quote:"Wir sind das Volk.",context:"Ruf bei den Montagsdemonstrationen, dokumentiert von LeMO",url:"https://www.hdg.de/lemo/kapitel/deutsche-einheit/friedliche-revolution/montagsdemonstrationen.html"}
+};
+const timeline=document.getElementById("timeline"),content=document.getElementById("content"),prev=document.getElementById("prev"),next=document.getElementById("next"),modal=document.getElementById("photo-modal");let selected=0;
+events.forEach((event,i)=>{const b=document.createElement("button");b.type="button";b.className="point";b.setAttribute("aria-label",event.title);b.innerHTML=`<span class="dot" aria-hidden="true"></span><span class="year">${event.year}</span><span class="name">${event.label}</span>`;b.addEventListener("click",()=>showEvent(i));timeline.appendChild(b)});
+function showEvent(index){selected=Math.max(0,Math.min(events.length-1,index));const e=events[selected],url=commonsImage(e.imageFile),source=commonsPage(e.imageFile),q=primary[e.year];document.querySelectorAll(".point").forEach((b,i)=>{b.setAttribute("aria-current",i===selected?"true":"false")});content.classList.remove("fade");void content.offsetWidth;content.classList.add("fade");content.innerHTML=`<div class="event-hero"><img class="event-photo" src="${url}" alt="Historisches Foto zu ${e.title}" loading="lazy"><button type="button" class="photo-open">⤢ &nbsp;Bild vergrößern</button><div class="event-heading"><div class="kicker">Ereignis ${selected+1} / ${events.length}</div><h2>${e.title}</h2><p>${e.subtitle}</p></div></div><div class="event-content"><p class="caption">Bild: ${e.credit} · <a href="${source}" target="_blank" rel="noopener noreferrer">Originaldatei und Lizenz</a></p><div class="impact"><div class="impact-item"><b>Freiheit</b><span>${impact[selected][0]}</span></div><div class="impact-item"><b>Einheit</b><span>${impact[selected][1]}</span></div></div><div class="info-grid"><div class="info wide"><h3>Was passiert?</h3><p>${e.happened}</p></div><div class="info"><h3>Freiheit</h3><p>${e.freedom}</p></div><div class="info"><h3>Einheit</h3><p>${e.unity}</p></div></div><div class="takeaway"><h3>Bezug zur Leitfrage</h3><p>${e.question}</p></div>${q?`<aside class="source-box"><strong>Stimme aus der Zeit / Originalquelle</strong><blockquote>„${q.quote}“</blockquote><small>${q.context} · <a href="${q.url}" target="_blank" rel="noopener noreferrer">Quelle öffnen</a></small></aside>`:""}</div>`;const img=content.querySelector(".event-photo"),open=content.querySelector(".photo-open");img.addEventListener("error",()=>{img.classList.add("missing");open.hidden=true});open.addEventListener("click",()=>{document.getElementById("modal-title").textContent=e.title;document.getElementById("modal-photo").src=url;document.getElementById("modal-photo").alt=img.alt;document.getElementById("modal-credit").textContent="Bild: "+e.credit;modal.showModal()});prev.disabled=selected===0;next.disabled=selected===events.length-1;document.getElementById("progress").textContent=`${selected+1} / ${events.length}`;timeline.children[selected].scrollIntoView({block:"nearest",inline:"center",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"})}
+prev.addEventListener("click",()=>showEvent(selected-1));next.addEventListener("click",()=>showEvent(selected+1));document.getElementById("modal-close").addEventListener("click",()=>modal.close());modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
+const mapInfo={west:{title:"Bundesrepublik (BRD)",text:"1949 entsteht im Westen die Bundesrepublik mit Grundgesetz, freien Wahlen und Grundrechten. West-Berlin gehört politisch zum Westen, liegt aber mitten im Gebiet der DDR."},east:{title:"Deutsche Demokratische Republik (DDR)",text:"1949 entsteht im Osten die DDR. Unter der SED gibt es keine freien Wahlen zwischen konkurrierenden Parteien. Ab 1961 verhindert die Berliner Mauer viele Fluchten über West-Berlin."},berlin:{title:"Berlin – Stadt in zwei Teilen",text:"Berlin liegt im Gebiet der DDR und ist seit 1945 in vier Sektoren geteilt. 1961 riegelt die DDR die Grenze zwischen Ost- und West-Berlin ab. Die Mauer trennt Familien und schränkt die Bewegungsfreiheit ein."}};
+function setMap(region){document.querySelectorAll("[data-map]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.map===region?"true":"false"));document.querySelectorAll(".map-region").forEach(el=>el.classList.toggle("is-dim",region==="berlin"||el.dataset.region!==region));document.querySelectorAll(".map-region").forEach(el=>el.classList.toggle("is-active",el.dataset.region===region));document.getElementById("map-title").textContent=mapInfo[region].title;document.getElementById("map-text").textContent=mapInfo[region].text}
+document.querySelectorAll("[data-map]").forEach(b=>b.addEventListener("click",()=>setMap(b.dataset.map)));document.querySelectorAll("[data-region]").forEach(el=>el.addEventListener("click",()=>setMap(el.dataset.region)));setMap("berlin");
+const questions=[
+{q:"In welchem Jahr wurden BRD und DDR gegründet?",a:["1945","1949","1961"],correct:1},
+{q:"Was geschah am 17. Juni 1953 in der DDR?",a:["Ein Volksaufstand","Der Mauerfall","Der NATO-Beitritt"],correct:0},
+{q:"Welches Ereignis schränkte die Reisefreiheit besonders stark ein?",a:["Der Élysée-Vertrag","Der Bau der Berliner Mauer","Die Römischen Verträge"],correct:1},
+{q:"Wofür steht die Neue Ostpolitik ab 1969?",a:["Annäherung zwischen Ost und West","Gründung der NATO","Bau der Mauer"],correct:0},
+{q:"Was geschah am 9. November 1989?",a:["Gründung der DDR","Unterzeichnung des Grundgesetzes","Öffnung der Berliner Mauer"],correct:2}
+];
+const quiz=document.getElementById("quiz");questions.forEach((item,i)=>{const f=document.createElement("fieldset");f.className="quiz-question";f.innerHTML=`<legend>${i+1}. ${item.q}</legend>`+item.a.map((answer,j)=>`<label><input type="radio" name="q${i}" value="${j}">${answer}</label>`).join("");quiz.appendChild(f)});
+document.getElementById("quiz-submit").addEventListener("click",()=>{let score=0,answered=0;const lines=[];questions.forEach((item,i)=>{const chosen=quiz.querySelector(`input[name="q${i}"]:checked`);if(chosen){answered++;if(Number(chosen.value)===item.correct)score++}lines.push(`<li>${i+1}: ${chosen?(Number(chosen.value)===item.correct?"Richtig":"Richtig wäre: "+item.a[item.correct]):"Nicht beantwortet – "+item.a[item.correct]}</li>`)});const out=document.getElementById("quiz-result");out.innerHTML=`<p><strong>${score} von ${questions.length} Punkten</strong> · ${answered} von ${questions.length} Fragen beantwortet.</p><ol>${lines.join("")}</ol>`;out.hidden=false;out.scrollIntoView({behavior:"smooth",block:"nearest"})});
+const theme=document.getElementById("theme");function setTheme(dark){document.documentElement.dataset.theme=dark?"dark":"light";theme.innerHTML=dark?"☀ &nbsp;Light Mode":"◐ &nbsp;Dark Mode";theme.setAttribute("aria-label",dark?"Helles Design einschalten":"Dunkles Design einschalten");try{localStorage.setItem("geschichte-theme",dark?"dark":"light")}catch{}}let stored;try{stored=localStorage.getItem("geschichte-theme")}catch{}setTheme(stored==="dark");theme.addEventListener("click",()=>setTheme(document.documentElement.dataset.theme!=="dark"));
+showEvent(0);
+</script>
+</body>
+</html>
